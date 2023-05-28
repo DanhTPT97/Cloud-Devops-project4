@@ -39,7 +39,11 @@ source localEnv/Scripts/activate
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
+* Setup and Configure Docker locally: [Docker install](https://docs.docker.com/desktop/install/windows-install/)
+
+* Setup and Configure Kubernetes locally: change kubectl environment to point to docker-destop context
+    - `kubectl config use-context docker-desktop`
+* Create Flask app in Container on local: 
+    - `./run_docker.sh`
 * Run via kubectl
+    - `./run_kubernetes.sh`

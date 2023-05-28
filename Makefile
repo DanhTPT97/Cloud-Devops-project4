@@ -12,8 +12,16 @@ setup:
 
 install:
 	# This should be run from inside a virtualenv
-	python -m pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	python -m pip install --upgrade pip && \
+		pip install -r requirements.txt && \
+	# Hadolint install instructions:
+	# Linux
+	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+    chmod +x /bin/hadolint
+	# Windows
+	#Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+	#irm get.scoop.sh | iex
+	#scoop install hadolint
 
 test:
 	# Additional, optional, tests could go here
